@@ -54,6 +54,7 @@ zstyle 'fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias la='ls -a'
 alias ll='ls -la'
+alias treea='tree -I ".git" -a .'
 
 # pnpm
 #export PNPM_HOME="/Users/raulido/Library/pnpm"
