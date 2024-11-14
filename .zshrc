@@ -64,20 +64,10 @@ alias treea='tree -I ".git" -a .'
 #esac
 # pnpm end
 
-#PATH=~/.console-ninja/.bin:/opt/homebrew/opt/postgresql@16/bin:$(go env GOPATH)/bin:$PATH
-
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
-
-#export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-#export PATH="$PATH:$HOME/.rvm/bin"
-#. "$HOME/.asdf/asdf.sh"
-
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin-macchiato-theme.omp.json)"
