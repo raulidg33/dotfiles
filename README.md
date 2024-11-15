@@ -1,18 +1,30 @@
-# Fucking Dotfiles
+# Dotfiles
 
-Here lie the configuration files for my macOS setup
+Here lie the configuration files for my macOS setup.
 
 ## Usage
 
-You Idiot, did you really forget how to use your own fucking dotfiles?
+Did you really forget how to use your own dotfiles? Really??
 
-Well, here it goes.
+Well, here it goes...
 
-clone this fucking repository:
+Clone this repository into your User folder:
 ```
 git clone https://github.com/raulidg33/dotfiles.git
 ```
 
-Then run the installation script. Oh wait, there's no script yet. Either you wait or you figure it out on your own...
+Then run the installation script:
+```
+# enter scripts folder
+cd scripts/
+
+# make script executable
+sudo chmod +x install.sh
+
+# run install.sh
+./install.sh
+```
+
+And you are done!
 
 
