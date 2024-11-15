@@ -56,14 +56,6 @@ alias la='ls -a'
 alias ll='ls -la'
 alias treea='tree -I ".git" -a .'
 
-# pnpm
-#export PNPM_HOME="/Users/raulido/Library/pnpm"
-#case ":$PATH:" in
-#  *":$PNPM_HOME:"*) ;;
-#  *) export PATH="$PNPM_HOME:$PATH" ;;
-#esac
-# pnpm end
-
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
@@ -72,3 +64,4 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin-macchiato-theme.omp.json)"
 fi
+
