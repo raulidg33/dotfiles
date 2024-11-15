@@ -21,6 +21,7 @@
 	pkgs.appcleaner
 	pkgs.arc-browser
         pkgs.arduino
+	pkgs.cloudflare-warp
 	pkgs.cocoapods
 	pkgs.discord
 	pkgs.docker
@@ -37,6 +38,7 @@
 	pkgs.nmap
 	pkgs.oh-my-posh
 	pkgs.pgadmin4
+	pkgs.pnpm
 	pkgs.postgresql # service
 	pkgs.postman
 	pkgs.python310
@@ -59,14 +61,17 @@
 	  "adobe-creative-cloud"
 	  "azure-data-studio"
 	  "betterdisplay"
+	  "desktoppr"
 	  "dropbox"
 	  "godot"
 	  "google-chrome"
+	  "jordanbaird-ice"
 	  "macs-fan-control"
 	  "kitty"
 	  "nikitabobko/tap/aerospace"
 	  "scroll-reverser"
 	  "setapp"
+	  "vmware-fusion"
 	  "webex"
 	  "zed"
 	];
@@ -98,6 +103,8 @@
         finder.FXPreferredViewStyle = "clmv";
         finder.ShowPathbar = true;
 	finder.showStatusBar = true;
+	# launch services
+	LaunchServices.LSQuarantine = false
 	# login window
 	loginwindow.GuestEnabled = false;
 	# menu bar
