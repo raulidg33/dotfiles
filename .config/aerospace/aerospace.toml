@@ -265,6 +265,10 @@ run = "layout floating"
 if.app-id = 'com.markmcguill.strongbox'
 run = "layout floating"
 
+[[on-window-detected]]
+if.app-id = 'com.jordanbaird.Ice'
+run = "layout floating"
+
 [workspace-to-monitor-force-assignment]
 A = ['odyssey', 'secondary']
 C = 'built-in'
