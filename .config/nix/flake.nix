@@ -117,6 +117,7 @@
 				# window manager
 				WindowManager.EnableStandardClickToShowDesktop = false;
 				# dock
+				dock.show-recents = false;
         dock.persistent-apps = [
 					"/System/Applications/Launchpad.app"
 					"${pkgs.arc-browser}/Applications/Arc.app"
