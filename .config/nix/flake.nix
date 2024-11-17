@@ -17,83 +17,83 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = [
-	pkgs.alt-tab-macos
-	pkgs.appcleaner
-	pkgs.arc-browser
-        pkgs.arduino
-	pkgs.cloudflare-warp
-	pkgs.cocoapods
-	pkgs.discord
-	pkgs.docker
-	pkgs.flutter
-	pkgs.fzf
-	pkgs.iina
-	pkgs.keka
-	pkgs.mas
-	pkgs.meslo-lgs-nf
-	pkgs.moonlight-qt
-	pkgs.neofetch
+				pkgs.alt-tab-macos
+				pkgs.appcleaner
+				pkgs.arc-browser
+				pkgs.cocoapods
+				pkgs.discord
+				pkgs.docker
+				pkgs.flutter
+				pkgs.fzf
+				pkgs.iina
+				pkgs.keka
+				pkgs.mas
+				pkgs.meslo-lgs-nf
+				pkgs.moonlight-qt
+				pkgs.neofetch
         pkgs.neovim
-	pkgs.nodejs_22
-	pkgs.nmap
-	pkgs.oh-my-posh
-	pkgs.pgadmin4
-	pkgs.pnpm
-	pkgs.postgresql # service
-	pkgs.postman
-	pkgs.python310
-	pkgs.raycast
-	pkgs.steam
-	pkgs.teams
-	pkgs.vscode
-	pkgs.wget
-	pkgs.zoom-us
-	pkgs.zoxide
+				pkgs.nmap
+				pkgs.oh-my-posh
+				pkgs.pgadmin4
+				pkgs.pnpm
+				pkgs.postgresql # service
+				pkgs.postman
+				pkgs.python310
+				pkgs.raycast
+				pkgs.vscode
+				pkgs.wget
+				pkgs.zoom-us
+				pkgs.zoxide
       ];
       
       # homebrew apps and config
       homebrew = {
         enable = true;
         brews = [
-	  "noclamshell" # service
-	];
+					"noclamshell" # service
+					"node"
+				];
         casks = [
-	  "adobe-creative-cloud"
-	  "azure-data-studio"
-	  "betterdisplay"
-	  "desktoppr"
-	  "dropbox"
-	  "godot"
-	  "google-chrome"
-	  "jordanbaird-ice"
-	  "macs-fan-control"
-	  "kitty"
-	  "nikitabobko/tap/aerospace"
-	  "scroll-reverser"
-	  "setapp"
-	  "vmware-fusion"
-	  "webex"
-	  "zed"
-	];
+					"adobe-creative-cloud"
+					"arduino"
+					"azure-data-studio"
+					"betterdisplay"
+					"cloudflare-warp"
+					"desktoppr"
+					"dropbox"
+					"godot"
+					"google-chrome"
+					"jordanbaird-ice"
+					"macs-fan-control"
+					"microsoft-teams"
+					"kitty"
+					"nikitabobko/tap/aerospace"
+					"scroll-reverser"
+					"setapp"
+					"steam"
+					"vmware-fusion"
+					"webex"
+					"zed"
+				];
         masApps = {
-	  "Color Picker" = 1545870783;
-	  "Dropover" = 1355679052;
-	  "Infuse" = 1136220934;
-	  "Hand Mirror" = 1502839586;
-	  "Microsoft Excel" = 462058435;
-	  "Microsoft PowerPoint" = 462062816;
-	  "Microsoft Remote Desktop" = 1295203466;
-	  "Microsoft Word" = 462054704;
-	  "SecurID Authenticator" = 318038618;
-	  "ServerCat" = 1501532023;
-	  "Strongbox" = 897283731;
-	  "Telegram" = 747648890;
-	  "Unsplash Wallpapers" = 1284863847;
-	  "WhatsApp" = 310633997;
-	  "Xcode" = 497799835;
-	};
-	onActivation.autoUpdate = true;
-	onActivation.upgrade = true;
+					"Color Picker" = 1545870783;
+					"Dropover" = 1355679052;
+					"Infuse" = 1136220934;
+					"Hand Mirror" = 1502839586;
+					"Microsoft Excel" = 462058435;
+					"Microsoft PowerPoint" = 462062816;
+					"Microsoft Remote Desktop" = 1295203466;
+					"Microsoft Word" = 462054704;
+					"SecurID Authenticator" = 318038618;
+					"ServerCat" = 1501532023;
+					"Strongbox" = 897283731;
+					"Telegram" = 747648890;
+					"Unsplash Wallpapers" = 1284863847;
+					"WhatsApp" = 310633997;
+					"Xcode" = 497799835;
+				};
+				onActivation.autoUpdate = true;
+				onActivation.upgrade = true;
       };
 
       # fonts
@@ -102,46 +102,47 @@
         # finder
         finder.FXPreferredViewStyle = "clmv";
         finder.ShowPathbar = true;
-	finder.showStatusBar = true;
-	# launch services
-	LaunchServices.LSQuarantine = false
-	# login window
-	loginwindow.GuestEnabled = false;
-	# menu bar
-	menuExtraClock.ShowDate = 2;
+				finder.ShowStatusBar = true;
+				# launch services
+				LaunchServices.LSQuarantine = false;
+				# login window
+				loginwindow.GuestEnabled = false;
+				# menu bar
+				menuExtraClock.ShowDate = 2;
         # spaces
-	spaces.spans-displays = true;
-	# trackpad
-	trackpad.FirstClickThreshold = 2;
-	trackpad.SecondClickThreshold = 2;
-	# window manager
-	WindowManager.EnableStandardClickToShowDesktop = false;
-	# dock
+				spaces.spans-displays = true;
+				# trackpad
+				trackpad.FirstClickThreshold = 2;
+				trackpad.SecondClickThreshold = 2;
+				# window manager
+				WindowManager.EnableStandardClickToShowDesktop = false;
+				# dock
         dock.persistent-apps = [
-	  "${pkgs.arc-browser}/Applications/Arc.app"
-	  "/Applications/Messages.app"
-	  "/Applications/Telegram.app"
-	  "/Applications/WhatsApp.app"
-	  "${pkgs.teams}/Applications/Microsoft Teams.app"
-	  "/Applications/Mail.app"
-	  "/Applications/kitty.app"
-	  "${pkgs.vscode}/Applications/Visual Studio Code.app"
-	  "/Applications/Zed.app"
-	  "/Applications/Azure Data Studio.app"
-	  "/Applications/ServerCat.app"
-	  "/Applications/BusyCal.app"
-	  "/Applications/Reminders.app"
-	  "/Applications/Notes.app"
-	  "/Applications/Microsoft Excel.app"
-	  "/Applications/Microsoft Word.app"
-	  "/Applications/VMware Fusion.app"
-	  "/Applications/Microsoft Remote Desktop.app"
-	  "/Applications/iPhone Mirroring.app"
-	  "/Applications/TV.app"
-	  "/Applications/Music.app"
-	  "/Applications/App Store.app"
-	  "/Applications/System Settings.app"
-	];
+					"/System/Applications/Launchpad.app"
+					"${pkgs.arc-browser}/Applications/Arc.app"
+					"/System/Applications/Messages.app"
+					"/Applications/Telegram.app"
+					"/Applications/WhatsApp.app"
+					"/Applications/Microsoft Teams.app"
+					"/System/Applications/Mail.app"
+					"/Applications/kitty.app"
+					"${pkgs.vscode}/Applications/Visual Studio Code.app"
+					"/Applications/Zed.app"
+					"/Applications/Azure Data Studio.app"
+					"/Applications/ServerCat.app"
+					"/System/Applications/Calendar.app"
+					"/System/Applications/Reminders.app"
+					"/System/Applications/Notes.app"
+					"/Applications/Microsoft Excel.app"
+					"/Applications/Microsoft Word.app"
+					"/Applications/VMware Fusion.app"
+					"/Applications/Windows App.app"
+					"/System/Applications/iPhone Mirroring.app"
+					"/System/Applications/TV.app"
+					"/System/Applications/Music.app"
+					"/System/Applications/App Store.app"
+					"/System/Applications/System Settings.app"
+				];
       };
 
       security.pam.enableSudoTouchIdAuth = true;
@@ -173,15 +174,15 @@
     darwinConfigurations."main" = nix-darwin.lib.darwinSystem {
       modules = [ 
         configuration
-	nix-homebrew.darwinModules.nix-homebrew
-	{
+				nix-homebrew.darwinModules.nix-homebrew
+				{
           nix-homebrew = {
             enable = true;
             enableRosetta = true;
             user = "raulido";
             autoMigrate = true;
           };
-	}
+				}
       ];
     };
 

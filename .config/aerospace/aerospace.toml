@@ -230,6 +230,10 @@ if.app-id = 'com.azuredatastudio.oss'
 run = "move-node-to-workspace S"
 
 [[on-window-detected]]
+if.app-id = 'org.pgadmin.pgadmin4'
+run = "move-node-to-workspace S"
+
+[[on-window-detected]]
 if.app-id = 'com.googlecode.iterm2'
 run = "move-node-to-workspace T"
 
@@ -267,6 +271,10 @@ run = "layout floating"
 
 [[on-window-detected]]
 if.app-id = 'com.jordanbaird.Ice'
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = 'com.setapp.DesktopClient'
 run = "layout floating"
 
 [workspace-to-monitor-force-assignment]
