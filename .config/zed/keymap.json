@@ -1,0 +1,17 @@
+[
+  {
+    "context": "!ProjectPanel",
+    "bindings": {
+      "cmd-alt-shift-e": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-shift-r": "project_panel::CollapseAllEntries",
+      "cmd-k cmd-e": [
+        "workspace::SendKeystrokes",
+        "cmd-alt-shift-e cmd-shift-r cmd-shift-e"
+      ]
+    }
+  }
+]
