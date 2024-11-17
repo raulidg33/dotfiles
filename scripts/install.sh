@@ -22,4 +22,13 @@ source ~/.zshrc
 # initializing nix-darwin
 nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ../.config/nix"#main"
 
+# restart dock
 killall Dock
+
+# copy preferences
+cp ../extras/preferences/* ~/Library/Preferences/
+
+# open some apps
+open /Applications/AeroSpace.app
+open /Applications/Ice.app
+open /Applications/Setapp.app
