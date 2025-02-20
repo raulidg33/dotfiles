@@ -12,18 +12,15 @@ sudo chown root:wheel ~/Library/Preferences/com.apple.HIToolbox.plist; sudo chmo
 # installing nix
 sh <(curl -L https://nixos.org/nix/install) --yes
 
+# reload zsh
+exec zsh
+
+# initializing nix-darwin
+nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/dotfiles/.config/nix"#main"
+
 # run stow
 cd ../
 stow --adopt .
-
-# reload config
-source ~/.zshrc
-
-# initializing nix-darwin
-nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ../.config/nix"#main"
-
-# restart dock
-killall Dock
 
 # copy preferences
 cp ../extras/preferences/* ~/Library/Preferences/

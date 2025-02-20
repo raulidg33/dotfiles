@@ -13,5 +13,11 @@
         "cmd-alt-shift-e cmd-shift-r cmd-shift-e"
       ]
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-i": "editor::SplitSelectionIntoLines"
+    }
   }
 ]

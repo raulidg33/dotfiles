@@ -1,11 +1,10 @@
+# zmodload zsh/zprof
 # Define ZINIT_HOME
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # Install zinit if not installed
-if [ ! -d "$ZINIT_HOME" ]; then
-  mkdir -p "$(dirname $ZINIT_HOME)"
-  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-fi
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 
 # Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
@@ -16,12 +15,8 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-# Snippets
-zinit snippet OMZP::git
-zinit snippet OMZP::command-not-found
-
 # Load completions
-autoload -U compinit && compinit
+autoload -U compinit && compinit -C
 
 zinit cdreplay -q
 
@@ -48,12 +43,11 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle 'fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='ls --color'
-alias la='ls -a'
-alias ll='ls -la'
+alias ls='ls -l --color'
+alias ll='ls -la --color'
 alias treea='tree -I ".git" -a .'
 
 # Shell integrations
@@ -65,3 +59,7 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin-macchiato-theme.omp.json)"
 fi
 
+PATH=~/.console-ninja/.bin:$PATH
+
+export TERM=xterm
+# zprof
